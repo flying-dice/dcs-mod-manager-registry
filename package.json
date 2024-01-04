@@ -1,0 +1,14 @@
+{
+  "name": "dcs-mod-manager-registry",
+  "version": "1.0.0",
+  "description": "DCS World Mod Manager Registry",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "glob": "^10.3.10",
+    "js-yaml": "^4.1.0"
+  }
+}
