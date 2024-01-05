@@ -4,11 +4,14 @@
   "description": "DCS World Mod Manager Registry",
   "license": "MIT",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "dev": "http-server -p 8080 dist --cors"
   },
   "dependencies": {
     "fs-extra": "^11.2.0",
     "glob": "^10.3.10",
-    "js-yaml": "^4.1.0"
+    "http-server": "^14.1.1",
+    "js-yaml": "^4.1.0",
+    "object-hash": "^3.0.0"
   }
 }
