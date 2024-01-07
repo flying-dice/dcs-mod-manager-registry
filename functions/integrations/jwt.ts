@@ -26,6 +26,7 @@ export const onRequest: PagesFunction<Env> = async (context): Promise<Response> 
 
     return new Response(jwt, { headers: { "X-DROPZONE-ID": `${context.params.id}` } })
   } catch (e) {
+    console.error("Error while generating JWT", e)
     debug("Error while generating JWT: %O", e)
     return new Response("Internal Server Error", { status: 500 })
   }
