@@ -1,7 +1,4 @@
 import * as jose from "jose"
-import debug0 from "debug"
-
-const debug = debug0("jwt")
 
 interface Env {
   JWT_SECRET: string;
@@ -16,18 +13,18 @@ export const onRequest: PagesFunction<Env> = async (context): Promise<Response> 
 
   try {
     const searchParams = new URL(context.request.url).searchParams
+    const id = searchParams?.get("id")
 
-    if (!searchParams?.get("id")) {
+    if (!id) {
       return new Response("Bad Request, search params should contain valid ID", { status: 400 })
     }
 
     const secret = new TextEncoder().encode(context.env.JWT_SECRET)
-    const jwt = await new jose.SignJWT({ id: context.params.id }).setProtectedHeader({ alg: "HS256" }).sign(secret)
+    const jwt = await new jose.SignJWT({ id }).setProtectedHeader({ alg: "HS256" }).sign(secret)
 
-    return new Response(jwt, { headers: { "X-DROPZONE-ID": `${context.params.id}` } })
+    return new Response(jwt, { headers: { "X-DROPZONE-ID": id } })
   } catch (e) {
     console.error("Error while generating JWT", e)
-    debug("Error while generating JWT: %O", e)
     return new Response("Internal Server Error", { status: 500 })
   }
 }
