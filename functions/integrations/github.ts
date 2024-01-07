@@ -10,9 +10,10 @@ interface Env {
 }
 
 export const onRequest: PagesFunction<Env> = async (context): Promise<Response> => {
-  const jwt = context.request.headers.get("X-Hub-Signature-256")
+  const searchParams = new URL(context.request.url).searchParams
+  const token = searchParams?.get("token")
 
-  if (!jwt) {
+  if (!token) {
     return new Response("Unauthorized", { status: 401 })
   }
 
@@ -20,7 +21,7 @@ export const onRequest: PagesFunction<Env> = async (context): Promise<Response> 
   let payload: any
 
   try {
-    const verified = await jose.jwtVerify(jwt, secret)
+    const verified = await jose.jwtVerify(token, secret)
     payload = verified.payload
   } catch (e) {
     return new Response("Unauthorized", { status: 401 })
