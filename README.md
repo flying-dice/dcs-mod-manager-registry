@@ -1,61 +1,53 @@
 # DCS DROPZONE Registry
 
-This is the registry for the DCS DROPZONE community mod manager.
+Welcome to the DCS DROPZONE Registry! This is the central hub for all mods available in the DCS DROPZONE community mod manager. 
 
-It contains all the mods that are available for download in DCS DROPZONE.
+## How to Contribute
 
-## Contributing
+We're excited about your interest in contributing to the DCS DROPZONE! 
 
-If you want to add your mod to the registry, please raise an issue or a PR with the following changes:
+To add your mod to the registry, follow these simple steps:
 
-1. Add a new folder to the `registry` folder with the name of your mod
-2. Add a `index.md` file to the folder you just created
-3. Add a `latest.md` file to the folder you just created
-4. Add an `index.png` or `index.jpg` file to the folder you just created
+1. **Create a New Folder**: Inside the `registry` folder, create a new folder named after your mod.
+2. **Add Key Files**: In your new folder, add the following files:
+  - `index.md`: For your mod's metadata and description.
+  - `latest.md`: To detail the latest version of your mod.
+  - An image file (`index.png` or `index.jpg`): To visually represent your mod.
+
+Check out the [example-mod](registry/example-mod) folder as a guide for setting up your mod's directory.
 
 Once your pull request is merged, your mod will be available for download in DCS DROPZONE.
 
-> Use the [example-mod](registry/example-mod) folder as a template for your mod.
-
 ## GitHub Integration
 
-Adding this means that you can use GitHub to host your mod files and releases
-and the registry will automatically update when you create a new release.
+Enhance your mod's accessibility and update process by integrating with GitHub! Follow these steps:
 
-To do this, you need to create a new repository in GitHub with the name of your mod.
+1. **Host Your Mod on GitHub**: Ensure your mod releases are hosted in a GitHub repository.
+2. **Set Up a Webhook**: In your repository settings, add a webhook with these configurations:
+  - **Payload URL:** `https://develop.dcs-mod-manager-registry.pages.dev/integrations/github?token=YOUR_TOKEN`
+  - **Content Type:** `application/json`
+  - **Secret:** Leave this field empty.
+  - **SSL Verification:** Enable this option.
+  - **Trigger Events:** Select 'Releases'.
 
-You should then add a webhook to your repository with the following settings:
+### TOKEN Guidelines:
+- **Requesting a Token**: Obtain your token through an initial setup MR or a dedicated issue.
+- **Security and Use**: Tokens are unique JWTs linked to your mod folder and GitHub repository. They are meant for single-use and should not be shared.
+- **Verification**: You can verify your token's contents at any time on [jwt.io](https://jwt.io/).
 
-- **Payload URL:** https://dcs-mod-manager-registry.pages.dev/integrations/github
-- **Content Type:** application/json
-- **Secret:** PROVIDED AS PART OF THE PULL REQUEST APPROVAL 
-  - *This is a signed JWT. The JWT Contains the folder to be updated and the action event contains the GH Repo to get releases from so use the issued token per mod/repo combo*
-- **SSL verification** should be enabled.
-- **Which events would you like to trigger this webhook?:** Let me select individual events. > Releases
+## About Markdown Files
 
-Now when you create a new release in GitHub, the registry will automatically update the mod folder based off the GitHub releases.
+The markdown files (`index.md` and `latest.md`) serve as the primary source of information for users about your mod. We use [gray-matter](https://www.npmjs.com/package/gray-matter) for parsing these files, supporting various formats like TOML, JSON, YAML, etc.
 
-## Markdown Files
-
-The markdown files are used to provide information to the user about your mod, they contain an index
-and a latest file.
-
-They are read using https://www.npmjs.com/package/gray-matter which parses the yaml front matter and
-the markdown content.
-
-Anything valid for the library gray-matter is valid for the markdown files including the ability to
-use TOML, JSON, YAML or any other format that can be parsed by gray-matter.
-
-The files must follow the front matter format as below.
-
+### Structure of Markdown Files:
+Use the following front matter format in your markdown files:
 ```markdown
 ---yml
-THESE ARE YOUR METADATA FIELDS
+# Metadata Fields
 ---
-THIS IS YOUR CONTENT
+# Content
 ```
-
-For a complete example of a markdown file, see the [example-mod](registry/example-mod) folder.
+Refer to the [example-mod](registry/example-mod) for a detailed markdown file example.
 
 ### index.md
 
