@@ -11,8 +11,10 @@ export const onRequest: PagesFunction<Env> = async (context): Promise<Response> 
     return new Response("Unauthorized", { status: 401 })
   }
 
-  if (!context.params.id) {
-    return new Response("Bad Request", { status: 400 })
+  const searchParams = new URL(context.request.url).searchParams
+
+  if (!searchParams?.get("id")) {
+    return new Response("Bad Request, search params should contain valid ID", { status: 400 })
   }
 
   const secret = new TextEncoder().encode(context.env.JWT_SECRET)
