@@ -1,4 +1,4 @@
-import * as jwt from "jsonwebtoken"
+import * as jose from "jose"
 
 interface Env {
   JWT_SECRET: string;
@@ -11,5 +11,12 @@ export const onRequest: PagesFunction<Env> = async (context): Promise<Response> 
     return new Response("Unauthorized", { status: 401 })
   }
 
-  return new Response(jwt.sign({ aud: context.params.id }, context.env.JWT_SECRET, { expiresIn: '1h' }))
+  if (!context.params.id) {
+    return new Response("Bad Request", { status: 400 })
+  }
+
+  const secret = new TextEncoder().encode(context.env.JWT_SECRET)
+  const jwt = await new jose.SignJWT({ id: context.params.id }).sign(secret)
+
+  return new Response(jwt, { headers: { "X-DROPZONE-ID": `${context.params.id}` } })
 }

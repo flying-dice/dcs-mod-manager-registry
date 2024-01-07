@@ -1,6 +1,6 @@
 import { Octokit } from "octokit"
 import { stringify } from "gray-matter"
-import * as jwt from "jsonwebtoken"
+import * as jose from "jose"
 
 let octokit: Octokit;
 
@@ -10,16 +10,18 @@ interface Env {
 }
 
 export const onRequest: PagesFunction<Env> = async (context): Promise<Response> => {
-  const secret = context.request.headers.get("X-Hub-Signature-256")
+  const jwt = context.request.headers.get("X-Hub-Signature-256")
 
-  if (!secret) {
+  if (!jwt) {
     return new Response("Unauthorized", { status: 401 })
   }
 
-  let payload: jwt.JwtPayload
+  const secret = new TextEncoder().encode(context.env.JWT_SECRET)
+  let payload: any
 
   try {
-    payload = jwt.verify(secret, context.env.JWT_SECRET) as jwt.JwtPayload
+    const verified = await jose.jwtVerify(jwt, secret)
+    payload = verified.payload
   } catch (e) {
     return new Response("Unauthorized", { status: 401 })
   }
@@ -42,5 +44,5 @@ export const onRequest: PagesFunction<Env> = async (context): Promise<Response> 
     date: latest.data.created_at
   })
 
-  return new Response(latestMd, { headers: { "X-DROPZONE-ID": `${payload.aud}` } })
+  return new Response(latestMd, { headers: { "X-DROPZONE-ID": `${payload.id}` } })
 }
