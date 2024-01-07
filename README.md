@@ -15,13 +15,14 @@ If you want to add your mod to the registry, please raise an issue or a PR with 
 
 Once your pull request is merged, your mod will be available for download in DCS DROPZONE.
 
+> Use the [example-mod](registry/example-mod) folder as a template for your mod.
+
 ## GitHub Integration
 
 Adding this means that you can use GitHub to host your mod files and releases
 and the registry will automatically update when you create a new release.
 
-To do this, you need to create a new repository in GitHub with the name of your mod, then create a new release
-with the version of your mod and the release files.
+To do this, you need to create a new repository in GitHub with the name of your mod.
 
 You should then add a webhook to your repository with the following settings:
 
@@ -31,6 +32,8 @@ You should then add a webhook to your repository with the following settings:
   - *This is a signed JWT. The JWT Contains the folder to be updated and the action event contains the GH Repo to get releases from so use the issued token per mod/repo combo*
 - **SSL verification** should be enabled.
 - **Which events would you like to trigger this webhook?:** Let me select individual events. > Releases
+
+Now when you create a new release in GitHub, the registry will automatically update the mod folder based off the GitHub releases.
 
 ## Markdown Files
 
