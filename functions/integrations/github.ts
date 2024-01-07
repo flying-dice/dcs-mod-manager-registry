@@ -1,4 +1,5 @@
 import { Octokit } from "octokit"
+import { stringify } from "gray-matter"
 
 let octokit: Octokit;
 
@@ -16,7 +17,12 @@ export const onRequest: PagesFunction<Env> = async (context): Promise<Response> 
   const latest = await octokit.rest.repos.getLatestRelease({
     owner: "flying-dice",
     repo: "hello-world-mod",
+    mediaType: {format: "raw"},
   });
 
-  return new Response(latest.data.tag_name)
+  return new Response(stringify({ content: latest.data.body }, {
+    name: latest.data.name,
+    version: latest.data.tag_name,
+    date: latest.data.created_at
+  }))
 }
