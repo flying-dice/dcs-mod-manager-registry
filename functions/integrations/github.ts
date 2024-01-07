@@ -33,8 +33,8 @@ export const onRequest: PagesFunction<Env> = async (context): Promise<Response> 
   }
 
   const latest = await octokit.rest.repos.getLatestRelease({
-    owner: "flying-dice",
-    repo: "hello-world-mod",
+    owner: payload.owner,
+    repo: payload.repo,
     mediaType: {format: "raw"},
   });
 
