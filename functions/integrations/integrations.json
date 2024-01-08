@@ -1,0 +1,11 @@
+{
+  "example-mod": {
+    "admins": [
+      "JonathanTurnock",
+      "john681611"
+    ],
+    "type": "github",
+    "owner": "flying-dice",
+    "repo": "hello-world-mod"
+  }
+}
