@@ -26,7 +26,7 @@ export const onRequest: PagesFunction<Env> = async (context): Promise<Response> 
     }
 
     const secret = new TextEncoder().encode(context.env.JWT_SECRET)
-    const jwt = await new jose.SignJWT({ id, owner, repo }).setProtectedHeader({ alg: "HS256" }).sign(secret)
+    const jwt = await new jose.SignJWT({ id, owner, repo }).setProtectedHeader({ alg: "HS256" }).setIssuedAt(Date.now()).sign(secret)
 
     return new Response(jwt, { headers: { "X-DROPZONE-ID": id } })
   } catch (e) {
