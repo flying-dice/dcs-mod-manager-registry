@@ -119,7 +119,6 @@ export type RegistryIndexItem = {
   authors: RegistryIndexItemAuthorsItem[];
   /** The category of the mod, this is used to group mods in the mod browser */
   category: string;
-  content: string;
   /** A short description of the mod to be displayed in the mod tile */
   description: string;
   id: string;
