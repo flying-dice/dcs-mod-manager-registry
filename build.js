@@ -86,6 +86,7 @@ const installDataSchema = z.object({
   repository: z.string().url().describe("The release page of the release"),
   assets: z.array(z.object({
     name: z.string().describe("The name of the file"),
+    zipPath: z.string().optional().describe("The path within the zip to the mod to extract to target"),
     target: z.string().describe("The name of the installation location relative to install path")
   })).describe("The array of files to install"),
 });
