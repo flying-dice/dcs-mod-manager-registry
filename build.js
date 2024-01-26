@@ -10,6 +10,7 @@ const baseSchema = require("./schema.json");
 const { mapValues, keyBy } = require("lodash");
 const _ = require("lodash");
 
+
 /**
  * Represents a list of mandatory files, these must be present in every mod folder, otherwise the build will fail
  * If a file is an array, then one of the files must be present
@@ -76,7 +77,18 @@ const releaseDataSchema = z.object({
   releasepage: z.string().url().describe("The release page of the release"),
   name: z.string().describe("The name of the release"),
   version: z.string().describe("The version of the release"),
+  tag: z.string().describe("The tag of the release"),
   date: z.coerce.date().describe("The date of the release"),
+});
+
+
+const installDataSchema = z.object({
+  repository: z.string().url().describe("The release page of the release"),
+  assets: z.array(z.object({
+    name: z.string().describe("The name of the file"),
+    zipPath: z.string().optional().describe("The path within the zip to the mod to extract to target"),
+    target: z.string().describe("The name of the installation location relative to install path")
+  })).describe("The array of files to install"),
 });
 
 const indexDtoSchema = indexDataSchema.extend({
@@ -92,6 +104,7 @@ const indexDtoSchema = indexDataSchema.extend({
   ),
 });
 const releaseDtoSchema = releaseDataSchema.extend({ content: z.string() });
+const installAndContentDataSchema = installDataSchema.extend({ content: z.string() });
 const registryIndexItemDtoSchema = indexDtoSchema.omit({
   homepage: true,
   license: true,
@@ -154,9 +167,14 @@ mods.forEach((modFolder) => {
   debug("Parsing latest.md for %s", modFolder.name);
   const latestData = releaseDataSchema.parse(latest.data);
 
+  debug("Reading install.md for %s", modFolder.name);
+  const install = read(`./registry/${modFolder.name}/install.md`);
+  debug("Parsing install.md for %s", modFolder.name);
+  const installData = installDataSchema.parse(install.data);
+
   // Copy image file to dist
   const imageFile = ["index.jpg", "index.png"].find((it) =>
-    fs.existsSync(join(modFolder.path, modFolder.name, it)),
+    fs.existsSync(join(__dirname, "registry", modFolder.name, it)),
   );
   if (!imageFile) {
     throw new Error(`No image file found for ${modFolder.name}`);
@@ -179,12 +197,17 @@ mods.forEach((modFolder) => {
     content: Buffer.from(latest.content).toString("base64"),
   });
 
+  const installDto = installAndContentDataSchema.parse({
+    ...installData,
+    content: Buffer.from(install.content).toString("base64"),
+  });
+
   // Add mod to index.json and parse it with the schema ensuring it is valid and extraneous data is removed
   indexJson.push(registryIndexItemDtoSchema.parse(indexDto));
 
   // Copy image file to dist
   copyAsset(
-    join(modFolder.path, modFolder.name, imageFile),
+    join(__dirname, "registry", modFolder.name, imageFile),
     join(__dirname, "dist", modFolder.name, imageFile),
   );
 
@@ -196,6 +219,10 @@ mods.forEach((modFolder) => {
   writeJsonFile(
     join(__dirname, "dist", modFolder.name, "latest.json"),
     latestDto,
+  );
+  writeJsonFile(
+    join(__dirname, "dist", modFolder.name, "install.json"),
+    installDto,
   );
 });
 

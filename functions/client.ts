@@ -32,6 +32,8 @@ export interface EntryLatestRelease {
   name: string;
   /** The release page of the release */
   releasepage: string;
+  /** The tag of the release */
+  tag: string;
   /** The version of the release */
   version: string;
 }
