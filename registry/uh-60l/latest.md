@@ -4,6 +4,9 @@ name: UH-60L 1.4
 tag: "1.4"
 version: "1.4"
 date: 2023-01-07T12:00:00Z
+assets:
+  - source: uh-60l-1.4.zip/#/UH-60l
+    target: Mods/aircraft/UH-60l
 ---
 
 UH-60L 1.4

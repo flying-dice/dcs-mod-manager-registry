@@ -24,7 +24,16 @@ export type GetIntegrationTokenParams = {
 id: string;
 };
 
+export type EntryLatestReleaseAssetsItem = {
+  /** The name of the file # seperates download path and internal zip path */
+  source: string;
+  /** The name of the installation location relative to install path */
+  target: string;
+};
+
 export interface EntryLatestRelease {
+  /** The array of files to install */
+  assets: EntryLatestReleaseAssetsItem[];
   content: string;
   /** The date of the release */
   date: string;
