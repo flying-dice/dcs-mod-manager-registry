@@ -16,6 +16,14 @@
     "owner": "flying-dice",
     "repo": "hello-world-mod"
   },
+  "HighDigitSAMs": {
+    "admins": [
+      "Auranis"
+    ],
+    "type": "github",
+    "owner": "Auranis",
+    "repo": "HighDigitSAMs"
+  },
   "uh-60l": {
     "admins": [
       "Kinkkujuustovoileipa"
