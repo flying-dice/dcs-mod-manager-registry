@@ -1,0 +1,27 @@
+{
+  "briefing-room": {
+    "admins": [
+      "john681611"
+    ],
+    "type": "github",
+    "owner": "akaAgar",
+    "repo": "briefing-room-for-dcs"
+  },
+  "example-mod": {
+    "admins": [
+      "JonathanTurnock",
+      "john681611"
+    ],
+    "type": "github",
+    "owner": "flying-dice",
+    "repo": "hello-world-mod"
+  },
+  "uh-60l": {
+    "admins": [
+      "Kinkkujuustovoileipa"
+    ],
+    "type": "github",
+    "owner": "Kinkkujuustovoileipa",
+    "repo": "uh-60l"
+  }
+}

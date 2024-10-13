@@ -1,0 +1,15 @@
+# DCS DROPZONE
+
+###
+@api-key-value = lK...Pj
+@modid = example-mod
+@owner = flying-dice
+@repo = hello-world-mod
+# @name Get JWT
+GET https://develop.dcs-mod-manager-registry.pages.dev/integrations/jwt?id={{modid}}&owner={{owner}}&repo={{repo}}
+x-dz-key: {{api-key-value}}
+
+###
+# @name Refresh Latest
+GET https://develop.dcs-mod-manager-registry.pages.dev/integrations/github?
+    token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6ImV4YW1wbGUtbW9kIiwib3duZXIiOiJmbHlpbmctZGljZSIsInJlcG8iOiJoZWxsby13b3JsZC1tb2QifQ.aGALSbtjPYRdvKss5Faxdy9CHCv1nNcpTFnSD23MULs
