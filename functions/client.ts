@@ -37,6 +37,8 @@ export interface EntryLatestRelease {
   content: string;
   /** The date of the release */
   date: string;
+  /** Executable file specifically Tools */
+  exe?: string;
   /** The name of the release */
   name: string;
   /** The release page of the release */
