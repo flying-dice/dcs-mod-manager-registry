@@ -1,4 +1,12 @@
 {
+  "briefing-room": {
+    "admins": [
+      "john681611"
+    ],
+    "type": "github",
+    "owner": "akaAgar",
+    "repo": "briefing-room-for-dcs"
+  },
   "example-mod": {
     "admins": [
       "JonathanTurnock",
