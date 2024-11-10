@@ -24,6 +24,14 @@
     "owner": "Auranis",
     "repo": "HighDigitSAMs"
   },
+  "hot-loader": {
+    "admins": [
+      "JonathanTurnock"
+    ],
+    "type": "github",
+    "owner": "flying-dice",
+    "repo": "dcs-hot-loader"
+  },
   "uh-60l": {
     "admins": [
       "Kinkkujuustovoileipa"
