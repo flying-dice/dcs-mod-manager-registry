@@ -1,5 +1,5 @@
 ---yml
-releasepage: https://github.com/flying-dice/hello-world-mod/releases/tag/0.1.0
+releasepage: https://github.com/flying-dice/dcs-hot-loader/releases/tag/v1.0.2
 name: RC1
 tag: v1.0.2
 version: 1.0.2
