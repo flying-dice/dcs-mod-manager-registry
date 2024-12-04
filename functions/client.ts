@@ -38,7 +38,7 @@ export interface EntryLatestRelease {
   /** The date of the release */
   date: string;
   /** Link to the download (must start download when clicked) */
-  downloadLink: string;
+  downloadURL: string;
   /** Executable file specifically Tools */
   exe?: string;
   /** The name of the release */

@@ -1,6 +1,6 @@
 ---yml
 releasepage: https://github.com/flying-dice/dcs-hot-loader/releases/tag/v1.0.2
-downloadLink: https://github.com/flying-dice/dcs-hot-loader/releases/download/v1.0.2/dcs-hot-loader.lua
+downloadURL: https://github.com/flying-dice/dcs-hot-loader/releases/download/v1.0.2/dcs-hot-loader.lua
 name: RC1
 tag: v1.0.2
 version: 1.0.2

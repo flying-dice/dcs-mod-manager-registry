@@ -1,6 +1,6 @@
 ---yml
 releasepage: https://github.com/akaAgar/briefing-room-for-dcs/releases/tag/release-202410.08-241008-171098-11240268625-1
-downloadLink: https://github.com/DCS-BR-Tools/briefing-room-for-dcs/releases/download/release-202410.08-241008-171098-11240268625-1/BriefingRoom-V0.5.202410.08.zip
+downloadURL: https://github.com/DCS-BR-Tools/briefing-room-for-dcs/releases/download/release-202410.08-241008-171098-11240268625-1/BriefingRoom-V0.5.202410.08.zip
 name: Version 0.5.202410.08
 tag: "0.5.202410.08"
 version: "release-202410.08-241008-171098-11240268625-1"
