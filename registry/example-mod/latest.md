@@ -1,5 +1,6 @@
 ---yml
 releasepage: https://github.com/flying-dice/hello-world-mod/releases/tag/0.1.0
+downloadLink: https://github.com/flying-dice/hello-world-mod/releases/download/0.1.0/hello-world.lua
 name: RC1
 tag: 0.1.0
 version: 0.1.0

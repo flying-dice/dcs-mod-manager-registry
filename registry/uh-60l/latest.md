@@ -1,5 +1,6 @@
 ---yml
 releasepage: https://github.com/Kinkkujuustovoileipa/uh-60l/releases/tag/1.4
+downloadLink: https://github.com/Kinkkujuustovoileipa/uh-60l/releases/download/1.4/uh-60l-1.4.zip
 name: UH-60L 1.4
 tag: "1.4"
 version: "1.4"

@@ -1,5 +1,6 @@
 ---yml
 releasepage: https://github.com/Auranis/HighDigitSAMs/releases/tag/v2.1.0
+downloadLink: https://github.com/Auranis/HighDigitSAMs/releases/download/v2.1.0/HighDigitSAMs_v2_1_0.zip
 name: V 2.1.0
 tag: "v2.1.0"
 version: "v2.1.0"

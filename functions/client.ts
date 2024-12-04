@@ -37,6 +37,8 @@ export interface EntryLatestRelease {
   content: string;
   /** The date of the release */
   date: string;
+  /** Link to the download (must start download when clicked) */
+  downloadLink: string;
   /** Executable file specifically Tools */
   exe?: string;
   /** The name of the release */
@@ -48,28 +50,6 @@ export interface EntryLatestRelease {
   /** The version of the release */
   version: string;
 }
-
-/**
- * The type of the integration
- */
-export type EntryIndexIntegrationOneOfType = typeof EntryIndexIntegrationOneOfType[keyof typeof EntryIndexIntegrationOneOfType];
-
-
-// eslint-disable-next-line @typescript-eslint/no-redeclare
-export const EntryIndexIntegrationOneOfType = {
-  github: 'github',
-} as const;
-
-export type EntryIndexIntegrationOneOf = {
-  /** Integration admins, these are the users that can generate tokens to trigger the integration */
-  admins: string[];
-  /** The owner of the repository */
-  owner: string;
-  /** The repository name */
-  repo: string;
-  /** The type of the integration */
-  type: EntryIndexIntegrationOneOfType;
-};
 
 export type EntryIndexAuthorsItem = {
   avatar?: string;
@@ -88,8 +68,6 @@ export interface EntryIndex {
   homepage: string;
   id: string;
   imageUrl: string;
-  /** The integration of the mod, this is used to automatically update the mod */
-  integration?: EntryIndexIntegrationOneOf;
   /** The license of the mod */
   license: string;
   /** The name of the mod */
@@ -97,30 +75,6 @@ export interface EntryIndex {
   /** The tags of the mod, these are used to filter mods in the mod browser */
   tags: string[];
 }
-
-export type RegistryIndex = RegistryIndexItem[];
-
-/**
- * The type of the integration
- */
-export type RegistryIndexItemIntegrationOneOfType = typeof RegistryIndexItemIntegrationOneOfType[keyof typeof RegistryIndexItemIntegrationOneOfType];
-
-
-// eslint-disable-next-line @typescript-eslint/no-redeclare
-export const RegistryIndexItemIntegrationOneOfType = {
-  github: 'github',
-} as const;
-
-export type RegistryIndexItemIntegrationOneOf = {
-  /** Integration admins, these are the users that can generate tokens to trigger the integration */
-  admins: string[];
-  /** The owner of the repository */
-  owner: string;
-  /** The repository name */
-  repo: string;
-  /** The type of the integration */
-  type: RegistryIndexItemIntegrationOneOfType;
-};
 
 export type RegistryIndexItemAuthorsItem = {
   avatar?: string;
@@ -136,13 +90,13 @@ export type RegistryIndexItem = {
   description: string;
   id: string;
   imageUrl: string;
-  /** The integration of the mod, this is used to automatically update the mod */
-  integration?: RegistryIndexItemIntegrationOneOf;
   /** The name of the mod */
   name: string;
   /** The tags of the mod, these are used to filter mods in the mod browser */
   tags: string[];
 };
+
+export type RegistryIndex = RegistryIndexItem[];
 
 
 
