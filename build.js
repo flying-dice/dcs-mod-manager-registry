@@ -59,7 +59,6 @@ const indexDataSchema = z.object({
  */
 const releaseDataSchema = z.object({
   releasepage: z.string().url().describe("The release page of the release"),
-  downloadURL: z.string().url().describe("Link to the download (must start download when clicked)"),
   name: z.string().describe("The name of the release"),
   version: z.string().describe("The version of the release"),
   tag: z.string().describe("The tag of the release"),
