@@ -38,7 +38,7 @@ export interface EntryLatestRelease {
   /** The date of the release */
   date: string;
   /** Executable file specifically Tools */
-  exe?: string;
+  exePath?: string;
   /** The name of the release */
   name: string;
   /** The release page of the release */
@@ -48,6 +48,43 @@ export interface EntryLatestRelease {
   /** The version of the release */
   version: string;
 }
+
+export interface EntryIndex {
+  authors: EntryIndexAuthorsItem[];
+  /** The category of the mod, this is used to group mods in the mod browser */
+  category: string;
+  content: string;
+  /** A short description of the mod to be displayed in the mod tile */
+  description: string;
+  /** The homepage of the mod */
+  homepage: string;
+  id: string;
+  imageUrl: string;
+  /** The integration of the mod, this is used to automatically update the mod */
+  integration?: EntryIndexIntegration;
+  /** The license of the mod */
+  license: string;
+  /** The name of the mod */
+  name: string;
+  /** The tags of the mod, these are used to filter mods in the mod browser */
+  tags: string[];
+}
+
+/**
+ * The type of the integration
+ */
+export type EntryIndexIntegrationOneOfThreeType = typeof EntryIndexIntegrationOneOfThreeType[keyof typeof EntryIndexIntegrationOneOfThreeType];
+
+
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+export const EntryIndexIntegrationOneOfThreeType = {
+  downloadLink: 'downloadLink',
+} as const;
+
+export type EntryIndexIntegrationOneOfThree = {
+  /** The type of the integration */
+  type: EntryIndexIntegrationOneOfThreeType;
+};
 
 /**
  * The type of the integration
@@ -71,34 +108,55 @@ export type EntryIndexIntegrationOneOf = {
   type: EntryIndexIntegrationOneOfType;
 };
 
+/**
+ * The integration of the mod, this is used to automatically update the mod
+ */
+export type EntryIndexIntegration = EntryIndexIntegrationOneOf | EntryIndexIntegrationOneOfThree;
+
 export type EntryIndexAuthorsItem = {
   avatar?: string;
   name: string;
   url?: string;
 };
 
-export interface EntryIndex {
-  authors: EntryIndexAuthorsItem[];
+export type RegistryIndexItem = {
+  authors: RegistryIndexItemAuthorsItem[];
   /** The category of the mod, this is used to group mods in the mod browser */
   category: string;
-  content: string;
   /** A short description of the mod to be displayed in the mod tile */
   description: string;
-  /** The homepage of the mod */
-  homepage: string;
   id: string;
   imageUrl: string;
   /** The integration of the mod, this is used to automatically update the mod */
-  integration?: EntryIndexIntegrationOneOf;
-  /** The license of the mod */
-  license: string;
+  integration?: RegistryIndexItemIntegration;
   /** The name of the mod */
   name: string;
   /** The tags of the mod, these are used to filter mods in the mod browser */
   tags: string[];
-}
+};
 
 export type RegistryIndex = RegistryIndexItem[];
+
+/**
+ * The type of the integration
+ */
+export type RegistryIndexItemIntegrationOneOfThreeType = typeof RegistryIndexItemIntegrationOneOfThreeType[keyof typeof RegistryIndexItemIntegrationOneOfThreeType];
+
+
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+export const RegistryIndexItemIntegrationOneOfThreeType = {
+  downloadLink: 'downloadLink',
+} as const;
+
+export type RegistryIndexItemIntegrationOneOfThree = {
+  /** The type of the integration */
+  type: RegistryIndexItemIntegrationOneOfThreeType;
+};
+
+/**
+ * The integration of the mod, this is used to automatically update the mod
+ */
+export type RegistryIndexItemIntegration = RegistryIndexItemIntegrationOneOf | RegistryIndexItemIntegrationOneOfThree;
 
 /**
  * The type of the integration
@@ -126,22 +184,6 @@ export type RegistryIndexItemAuthorsItem = {
   avatar?: string;
   name: string;
   url?: string;
-};
-
-export type RegistryIndexItem = {
-  authors: RegistryIndexItemAuthorsItem[];
-  /** The category of the mod, this is used to group mods in the mod browser */
-  category: string;
-  /** A short description of the mod to be displayed in the mod tile */
-  description: string;
-  id: string;
-  imageUrl: string;
-  /** The integration of the mod, this is used to automatically update the mod */
-  integration?: RegistryIndexItemIntegrationOneOf;
-  /** The name of the mod */
-  name: string;
-  /** The tags of the mod, these are used to filter mods in the mod browser */
-  tags: string[];
 };
 
 
