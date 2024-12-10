@@ -6,7 +6,7 @@ version: "release-202410.08-241008-171098-11240268625-1"
 date: 2024-10-08T12:00:00Z
 exePath: BriefingRoom-V0.5.202410.08\BriefingRoom-V0.5.202410.08\BriefingRoomDesktop.exe
 assets:
-  - source: https://github.com/DCS-BR-Tools/briefing-room-for-dcs/releases/download/release-202410.08-241008-171098-11240268625-1/BriefingRoom-V0.5.202410.08.zip/#/BriefingRoom
+  - source: https://github.com/DCS-BR-Tools/briefing-room-for-dcs/releases/download/release-202410.08-241008-171098-11240268625-1/BriefingRoom-V0.5.202410.08.zip/#/BriefingRoom-V0.5.202410.08
     target: '{{DCS_USER_DIR}}/Tools/BriefingRoom'
 ---
 **Old Templates using the Mk1 Progresion system may no longer work**
