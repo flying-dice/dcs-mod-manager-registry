@@ -8,12 +8,6 @@ tags:
     - scripting
 category: scripting
 license: GNU General Public License v3.0
-integration:
-    admins:
-        - JonathanTurnock
-    type: github
-    owner: flying-dice
-    repo: dcs-hot-loader
 ---
 [![Join Discord](https://img.shields.io/badge/Join-blue?logo=discord&label=Discord)](https://discord.gg/bT7BEHn5RD) 
 [![Discord](https://img.shields.io/discord/738118932937834566?logo=discord&label=Discord)](https://discord.com/channels/738118932937834566/1178991295260278785) 

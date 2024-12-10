@@ -8,13 +8,7 @@ tags:
     - hello
 category: example
 license: GNU General Public License v3.0
-integration:
-    admins:
-        - JonathanTurnock
-        - john681611
-    type: github
-    owner: flying-dice
-    repo: hello-world-mod
+
 ---
 # Example Hello World Mod
 

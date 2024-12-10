@@ -15,12 +15,6 @@ tags:
     - Flyable
 category: Helicopter
 license: GNU General Public License v3.0
-integration:
-    admins:
-        - Kinkkujuustovoileipa
-    type: github
-    owner: Kinkkujuustovoileipa
-    repo: uh-60l
 ---
 # UH-60L DCS Mod
 A free UH-60L Black Hawk mod for Digital Combat Simulator

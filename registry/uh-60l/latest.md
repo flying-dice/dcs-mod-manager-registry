@@ -5,7 +5,7 @@ tag: "1.4"
 version: "1.4"
 date: 2023-01-07T12:00:00Z
 assets:
-  - source: uh-60l-1.4.zip/#/UH-60L
+  - source: https://github.com/Kinkkujuustovoileipa/uh-60l/releases/download/1.4/uh-60l-1.4.zip/#/UH-60L
     target: Mods/aircraft/UH-60L 
 ---
 

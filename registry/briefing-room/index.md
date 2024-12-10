@@ -10,12 +10,6 @@ tags:
     - Tool
 category: Tool
 license: GNU General Public License v3.0
-integration:
-    admins:
-        - john681611
-    type: github
-    owner: akaAgar
-    repo: briefing-room-for-dcs
 ---
 ![BriefingRoom logo](https://github.com/akaAgar/briefing-room-for-dcs/blob/main/Media/SplashScreen.png?raw=true)
 

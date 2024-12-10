@@ -13,12 +13,6 @@ tags:
     - SAMS
 category: AI Units
 license: MIT License
-integration:
-    admins:
-        - Auranis
-    type: github
-    owner: Auranis
-    repo: HighDigitSAMs
 ---
 # HighDigitSAMs
 A simple, IC-compliant mod for DCS to add more SAM systems to the game, both modern and historical.  
