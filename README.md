@@ -18,22 +18,33 @@ Check out the [example-mod](registry/example-mod) folder as a guide for setting 
 
 Once your pull request is merged, your mod will be available for download in DCS DROPZONE.
 
-## GitHub Integration
+Alternatively, you can submit your mod through the Issue Tracker. Just create a new issue with the `mod-submission` label and attach your mod information.
 
-Enhance your mod's accessibility and update process by integrating with GitHub! Follow these steps:
+## Testing
 
-1. **Host Your Mod on GitHub**: Ensure your mod releases are hosted in a GitHub repository.
-2. **Set Up a Webhook**: In your repository settings, add a webhook with these configurations:
-  - **Payload URL:** `https://develop.dcs-mod-manager-registry.pages.dev/integrations/github?token=YOUR_TOKEN`
-  - **Content Type:** `application/json`
-  - **Secret:** Leave this field empty.
-  - **SSL Verification:** Enable this option.
-  - **Trigger Events:** Select 'Releases'.
+To test your mod locally once it has been added, you can run the following command:
 
-### TOKEN Guidelines:
-- **Requesting a Token**: Obtain your token through an initial setup MR or a dedicated issue.
-- **Security and Use**: Tokens are unique JWTs linked to your mod folder and GitHub repository. They are meant for single-use and should not be shared.
-- **Verification**: You can verify your token's contents at any time on [jwt.io](https://jwt.io/).
+```bash
+npm run dev
+```
+
+This will start a local server at `http://127.0.0.1:8080/` where you can view your mod.
+
+Load DCS DROPZONE and change the registry URL to `http://127.0.0.1:8080/` to see your mod within the mod manager.
+
+## Schemas and Docs
+
+## Registry API
+
+For the Registry API, we produce OpenAPI documentation. This is build and accessible from `/schema.json`.
+
+To view the Swagger UI open https://petstore.swagger.io/?url=http://127.0.0.1:8080/schema.json
+
+## Registry File Schema
+
+For the Registry MD files, we produce a JSON schema. This is build and accessible from `/registry.schema.json`.
+
+To view the schema, open https://json-schema.app/view/%23?url=http%3A%2F%2F127.0.0.1%3A8080%2Fregistry.schema.json
 
 ## About Markdown Files
 
@@ -51,29 +62,21 @@ Refer to the [example-mod](registry/example-mod) for a detailed markdown file ex
 
 ### index.md
 
-The `index.md` file contains the metadata for your mod. It should be in the following format:
-
-| Field Name  | Type                                 | Description                                                                      |
-|-------------|--------------------------------------|----------------------------------------------------------------------------------|
-| name        | string                               | The name of the mod                                                              |
-| description | string                               | A short description of the mod to be displayed in the mod tile                   |
-| homepage    | string (URL)                         | The homepage of the mod                                                          |
-| authors     | array(string \| {name, avatar, url}) | The authors of the mod either as a string or an object with name, avatar and url |
-| tags        | array(string)                        | The tags of the mod, these are used to filter mods in the mod browser            |
-| category    | string                               | The category of the mod, this is used to group mods in the mod browser           |
-| license     | string                               | The license of the mod                                                           |
+The `index.md` file contains the metadata for your mod. Check the Docs for the available fields.
 
 The Content of the file is the content that is displayed to the user when they open the mod page.
 
 ### latest.md
 
-The `latest.md` file contains the latest version of your mod. It should be in the following format:
+The `latest.md` file contains the latest version of your mod including assets to be downloaded and installed. Check the Docs for the available fields.
 
-| Field Name | Type              | Description             |
-|------------|-------------------|-------------------------|
-| name       | string            | The name of the version |
-| version    | string            | The version of the mod  |
-| date       | string (ISO 8601) | The date of the version |
+The `target` field takes a string that can be templated with the DCS variables i.e. `{{DCS_WRITE_DIR}}`.
+
+This variable is replaced with the DCS installation directory when the mod is installed.
+
+The available variables are:
+- `{{DCS_INSTALL_DIR}}`: The DCS installation directory. i.e. `C:\Program Files\Eagle Dynamics\DCS World`
+- `{{DCS_USER_DIR}}`: The DCS user directory. i.e. `%USERPROFILE%\Saved Games\DCS` where `%USERPROFILE%` is the user's home directory like `C:\Users\JohnDoe`
 
 The Content of the file is the content that is displayed to the user when they open the release info
 modal.

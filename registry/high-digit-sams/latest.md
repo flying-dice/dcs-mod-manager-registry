@@ -6,7 +6,7 @@ version: "v2.1.0"
 date: 2024-07-16T12:00:00Z
 assets:
   - source: https://github.com/Auranis/HighDigitSAMs/releases/download/v2.1.0/HighDigitSAMs_v2_1_0.zip/#/HighDigitSAMs_v2_1_0/Mods/tech/HighDigitSAMs
-    target: Mods\tech\HighDigitSAMs
+    target: '{{DCS_WRITE_DIR}}/Mods/tech/HighDigitSAMs'
 ---
 
 # V 2.1.0 Update for DCS 2.9.6, Added SAMP/T, Added SA-7, Improved S-300 Guidance
