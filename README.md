@@ -1,87 +1,95 @@
 # DCS DROPZONE Registry
 
-Welcome to the DCS DROPZONE Registry! This is the central hub for all mods available in the DCS DROPZONE community mod manager. 
+Welcome to the **DCS DROPZONE Registry**! This is the central hub for all mods available in the DCS DROPZONE community mod manager. Whether you're here to share your creation or explore others' mods, this guide will help you get started.
 
-## How to Contribute
+---
 
-We're excited about your interest in contributing to the DCS DROPZONE! 
+## 📥 How to Contribute
 
-To add your mod to the registry, follow these simple steps:
+We’re thrilled about your interest in contributing to the DCS DROPZONE! Follow these simple steps to add your mod to the registry:
 
-1. **Create a New Folder**: Inside the `registry` folder, create a new folder named after your mod.
-2. **Add Key Files**: In your new folder, add the following files:
-  - `index.md`: For your mod's metadata and description.
-  - `latest.md`: To detail the latest version of your mod.
-  - An image file (`index.png` or `index.jpg`): To visually represent your mod.
+### Step 1: Create a New Folder
+1. Navigate to the `registry` folder.
+2. Create a new folder named after your mod.
 
-Check out the [example-mod](registry/example-mod) folder as a guide for setting up your mod's directory.
+### Step 2: Add Key Files
+In your new folder, include the following files:
+- **`index.md`**: Metadata and description of your mod.
+- **`latest.md`**: Details of the latest version of your mod.
+- **Image File** (`index.png` or `index.jpg`): A preview image representing your mod.
 
-Once your pull request is merged, your mod will be available for download in DCS DROPZONE.
+> **Example**: Refer to the [example-mod](registry/example-mod) folder for a simple example.
 
-Alternatively, you can submit your mod through the Issue Tracker. Just create a new issue with the `mod-submission` label and attach your mod information.
+### Step 3: Submit Your Mod
+- **Preferred Method**: Submit a pull request to this repository. Once approved, your mod will be added to the registry.
+- **Alternative Method**: Use the **Issue Tracker**. Create a new issue with the `mod-submission` label and attach your mod information.
 
-## Testing
+---
 
-To test your mod locally once it has been added, you can run the following command:
+## 🛠️ Testing Your Mod Locally
 
-```bash
-npm run dev
-```
+To test your mod after adding it to the registry:
 
-This will start a local server at `http://127.0.0.1:8080/` where you can view your mod.
+1. Run the following command to start a local server:
+   ```bash
+   npm run dev
+   ```
 
-Load DCS DROPZONE and change the registry URL to `http://127.0.0.1:8080/` to see your mod within the mod manager.
+2. Access the server at `http://127.0.0.1:8080/` to preview your mod.
 
-## Schemas and Docs
+3. Open DCS DROPZONE and update the registry URL to `http://127.0.0.1:8080/` to view your mod in the mod manager.
 
-## Registry API
+---
 
-For the Registry API, we produce OpenAPI documentation. This is build and accessible from `/schema.json`.
+## 📜 Schemas and Documentation
 
-To view the Swagger UI open https://petstore.swagger.io/?url=http://127.0.0.1:8080/schema.json
+### Registry API
+We provide OpenAPI documentation for the Registry API, accessible at `/schema.json`.
 
-## Registry File Schema
+- **Main:** [Swagger UI](https://petstore.swagger.io/?url=https://dcs-mod-manager-registry.pages.dev/schema.json)
+- **Local:** [Swagger UI](https://petstore.swagger.io/?url=http://127.0.0.1:8080/schema.json)
 
-For the Registry MD files, we produce a JSON schema. This is build and accessible from `/registry.schema.json`.
+### Registry File Schema
+A JSON schema is available for the Registry MD files at `/registry.schema.json`.
 
-To view the schema, open https://json-schema.app/view/%23?url=http%3A%2F%2F127.0.0.1%3A8080%2Fregistry.schema.json
+- **Main:** [JSON Schema Viewer](https://json-schema.app/view/%23?url=https%3A%2F%2Fdcs-mod-manager-registry.pages.dev%2Fregistry.schema.json)
+- **Local:** [JSON Schema Viewer](https://json-schema.app/view/%23?url=http%3A%2F%2F127.0.0.1%3A8080%2Fregistry.schema.json)
 
-## About Markdown Files
+---
 
-The markdown files (`index.md` and `latest.md`) serve as the primary source of information for users about your mod. We use [gray-matter](https://www.npmjs.com/package/gray-matter) for parsing these files, supporting various formats like TOML, JSON, YAML, etc.
+## 📝 Markdown Files
 
-### Structure of Markdown Files:
+The `index.md` and `latest.md` markdown files serve as the primary source of information for your mod. These files are parsed using [gray-matter](https://www.npmjs.com/package/gray-matter) and support formats like TOML, JSON, and YAML.
+
+### Markdown Structure
 Use the following front matter format in your markdown files:
 ```markdown
----yml
+---
 # Metadata Fields
 ---
 # Content
 ```
-Refer to the [example-mod](registry/example-mod) for a detailed markdown file example.
+Refer to the [example-mod](registry/example-mod) for detailed examples.
 
-### index.md
+### `index.md`
+This file contains your mod’s metadata and serves as the description displayed to users when they view your mod’s page. Check the documentation for available metadata fields.
 
-The `index.md` file contains the metadata for your mod. Check the Docs for the available fields.
+### `latest.md`
+This file defines the latest version of your mod, including:
+- **Assets**: Files to be downloaded and installed.
+- **Target Field**: Specify installation paths using templated DCS variables:
+    - `{{DCS_INSTALL_DIR}}`: DCS installation directory (e.g., `C:\Program Files\Eagle Dynamics\DCS World`).
+    - `{{DCS_USER_DIR}}`: DCS user directory (e.g., `%USERPROFILE%\Saved Games\DCS`).
 
-The Content of the file is the content that is displayed to the user when they open the mod page.
+The content of this file is displayed to users when they open the release information modal.
 
-### latest.md
+---
 
-The `latest.md` file contains the latest version of your mod including assets to be downloaded and installed. Check the Docs for the available fields.
+## 🖼️ Image Files
 
-The `target` field takes a string that can be templated with the DCS variables i.e. `{{DCS_WRITE_DIR}}`.
+Include a preview image (`index.png` or `index.jpg`) in the root of your mod folder. This image will visually represent your mod to users.
 
-This variable is replaced with the DCS installation directory when the mod is installed.
+---
 
-The available variables are:
-- `{{DCS_INSTALL_DIR}}`: The DCS installation directory. i.e. `C:\Program Files\Eagle Dynamics\DCS World`
-- `{{DCS_USER_DIR}}`: The DCS user directory. i.e. `%USERPROFILE%\Saved Games\DCS` where `%USERPROFILE%` is the user's home directory like `C:\Users\JohnDoe`
+Thank you for contributing to the DCS DROPZONE Registry! We look forward to seeing your amazing creations!
 
-The Content of the file is the content that is displayed to the user when they open the release info
-modal.
-
-## Image Files
-
-The image files are used to provide a preview of your mod to the user. It should either be a PNG or
-JPG file located in the root of your mod folder.
