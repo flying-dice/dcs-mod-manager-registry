@@ -78,7 +78,6 @@ This file contains your mod’s metadata and serves as the description displayed
 This file defines the latest version of your mod, including:
 - **Assets**: Files to be downloaded and installed.
 - **Target Field**: Specify installation paths using templated DCS variables:
-    - `{{DCS_INSTALL_DIR}}`: DCS installation directory (e.g., `C:\Program Files\Eagle Dynamics\DCS World`).
     - `{{DCS_USER_DIR}}`: DCS user directory (e.g., `%USERPROFILE%\Saved Games\DCS`).
 
 The content of this file is displayed to users when they open the release information modal.
