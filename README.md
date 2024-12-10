@@ -22,7 +22,7 @@ In your new folder, include the following files:
 
 ### Step 3: Submit Your Mod
 - **Preferred Method**: Submit a pull request to this repository. Once approved, your mod will be added to the registry.
-- **Alternative Method**: Use the **Issue Tracker**. Create a new issue with the `mod-submission` label and attach your mod information.
+- **Alternative Method**: Use the **Issue Tracker**. Create a new issue using the `Mod Submission` template.
 
 ---
 
