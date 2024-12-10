@@ -63,7 +63,7 @@ const releaseDataSchema = z.object({
   version: z.string().describe("The version of the release"),
   tag: z.string().describe("The tag of the release"),
   date: z.coerce.date().describe("The date of the release"),
-  exe: z.string().describe("Executable file specifically Tools").optional(),
+  exePath: z.string().describe("Executable file specifically Tools").optional(),
   assets: z.array(z.object({
     source: z.string().describe("The name of the file # seperates download path and internal zip path"),
     target: z.string().describe("The name of the installation location relative to install path"),

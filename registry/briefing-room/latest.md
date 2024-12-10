@@ -4,7 +4,7 @@ name: Version 0.5.202410.08
 tag: "0.5.202410.08"
 version: "release-202410.08-241008-171098-11240268625-1"
 date: 2024-10-08T12:00:00Z
-exe: Tools/BriefingRoom/BriefingRoomDesktop.exe
+exePath: BriefingRoom-V0.5.202410.08\BriefingRoom-V0.5.202410.08\BriefingRoomDesktop.exe
 assets:
   - source: https://github.com/DCS-BR-Tools/briefing-room-for-dcs/releases/download/release-202410.08-241008-171098-11240268625-1/BriefingRoom-V0.5.202410.08.zip/#/BriefingRoom
     target: Tools/BriefingRoom
