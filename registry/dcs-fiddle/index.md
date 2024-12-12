@@ -5,21 +5,21 @@
 
 ![logo](https://github.com/flying-dice/dcsfiddle-server/blob/main/index.png?raw=true)
 
-# ⚛️ DCS Fiddle HTTP Server
+# DCS Fiddle HTTP Server
 
 This repository contains two HTTP servers designed to execute LUA scripts in DCS World, leveraging [tslua-dcs](https://tslua-dcs.pages.dev/) and [TypeScriptToLua](https://typescripttolua.github.io/). While primarily intended for integration with [DCS Fiddle](https://dcsfiddle.pages.dev/), these servers can also be used for other purposes.
 
-## ✨ Features
+## Features
 
 - **Execute LUA scripts:** Easily run LUA scripts in DCS World.
 - **RESTful API:** Interact via POST requests for seamless integration with tools and scripts.
 - **Swagger Integration:** View and test API endpoints with OpenAPI specifications.
 
-## 🔒 Prerequisites
+## Prerequisites
 
 To enable script execution, update your `MissionScripting.lua` file to allow access to `require` and `package` modules. Additionally, configure the LuaSocket package path as follows:
 
-### 🔧 Updating `MissionScripting.lua`
+### Updating `MissionScripting.lua`
 
 Replace your `MissionScripting.lua` file content with the following code:
 
@@ -50,14 +50,14 @@ package.path = package.path .. ";.\\LuaSocket\\?.lua"
 package.cpath = package.cpath .. ";.\\LuaSocket\\?.dll"
 ```
 
-## ⚡️ Installation
+## Installation
 
 Download the latest release from the [GitHub repository](https://github.com/flying-dice/dcsfiddle-server/releases).
 
 - Add the `dcs-fiddle-main.lua` file to your DCS World `%USERPROFILE%\Saved Games\DCS\Scripts\Hooks` folder.
 - Add the `dcs-fiddle-mission.lua` file to your DCS World `%USERPROFILE%\Saved Games\DCS\Scripts` folder.
 
-## 🚀 Usage
+## Usage
 
 When DCS starts it will load the `dcs-fiddle-main.lua` script, which will start the GUI HTTP server on port `12081`.
 
@@ -82,7 +82,7 @@ If the server is running, you will receive the following response:
 {"_APP_VERSION":"2.9.10.3948","version":"0.1.0","environment":"MISSION","status":"OK","_VERSION":"Lua 5.1","_ARCHITECTURE":"x86_64"}
 ```
 
-### 🔄 API Endpoints
+### API Endpoints
 
 1. **Health Check:**
     - Endpoint: `GET /health`
@@ -92,7 +92,7 @@ If the server is running, you will receive the following response:
     - Endpoint: `POST /loadstring`
     - Accepts a base64-encoded LUA script in the request body and executes it.
 
-### 📃 Example Requests
+### Example Requests
 
 #### Execute LUA Script
 
@@ -130,18 +130,18 @@ curl --location --request POST 'http://127.0.0.1:12080/loadstring' \
 { "NEUTRAL": 0, "BLUE": 2, "RED": 1 }
 ```
 
-### 📊 OpenAPI Documentation
+### OpenAPI Documentation
 
 View the API documentation in a Swagger editor, such as [Swagger Petstore](https://petstore.swagger.io/), by navigating to:
 
 - **Main:** https://petstore.swagger.io/?url=http://127.0.0.1:12081/v3/api-docs
 - **Mission:** https://petstore.swagger.io/?url=http://127.0.0.1:12080/v3/api-docs
 
-## ⚠️ Troubleshooting
+## Troubleshooting
 
 - **Server not starting:** Ensure all dependencies are installed and the required ports are not in use, ensure the MissionScripting.lua file is correctly configured.
 - **Script execution errors:** Verify that the LUA script is properly encoded in base64 and adheres to DCS scripting requirements.
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
