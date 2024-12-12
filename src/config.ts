@@ -1,16 +1,17 @@
 import { join } from "node:path";
 
 export type Config = {
-  registryPath: string;
-  indexFileName: string;
-  releaseFileName: string;
-  releaseImageNames: string[];
+    registryPath: string;
+    contentName: string;
+    outDir: string;
+    configName: string;
+    imageNames: string[];
 };
 
-export const config = {
-  registryPath: join(__dirname, "../registry"),
-  outDir: join(__dirname, "../dist"),
-  indexFileName: "index.md",
-  releaseFileName: "latest.md",
-  releaseImageNames: ["index.png", "index.jpg"],
+export const config: Config = {
+    registryPath: join(__dirname, "../registry"),
+    outDir: join(__dirname, "../dist"),
+    contentName: "index.md",
+    configName: "index.yaml",
+    imageNames: ["index.png", "index.jpg"],
 };

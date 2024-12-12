@@ -1,36 +1,29 @@
----yml
-homepage: https://github.com/Kinkkujuustovoileipa/uh-60l
-name: UH-60L
-description: A free UH-60L Black Hawk mod for Digital Combat Simulator
-authors:
-    - sniporbob
-    - shearn89
-    - ANDR0ID-DCS
-    - Norsk22771
-    - asherao
-    - Kinkkujuustovoileipa
-tags: 
-    - Helicopter
-    - High Fidelity
-    - Flyable
-category: Helicopter
-license: GNU General Public License v3.0
----
 # UH-60L DCS Mod
+
 A free UH-60L Black Hawk mod for Digital Combat Simulator
+
 ## Download
+
 After reading this readme, [click here to download the latest version from the releases page.](https://github.com/Kinkkujuustovoileipa/uh-60l/releases)
+
 ## Guide
+
 - [Link](https://docs.google.com/presentation/d/1kCJf5Nk-fU_21eO7W1ozYfb9FKt488ax65IbeuIGVtA/edit?usp=sharing)
 - Manual is also available in-game
+
 ## Installation
+
 - Extract the ‘Mods’ folder from the zip file into C:\Users\###\Saved Games\DCS\ folder (Steam) or C:\Users\###\Saved Games\DCS.OpenBeta\ (Standalone if Open Beta installed)
 - You may require the latest [C++ redistributables](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170) for this mod to work properly
 - If you use SRS, copy and paste the “DCS-SimpleRadioStandalone.lua” file to “C:\Users\###\Saved Games\DCS\Mods\Services\DCS-SRS\Scripts\” - BACK UP THE ORIGINAL!
 - In the mission editor, make sure the Historical Filter is disabled
+
 ## Changelog
+
 ### 1.4
+
 #### Bugs/Corrections
+
 - ASN-128B would decrement from waypoint 0 to waypoint 69 - credit: Sniporbob
 - ASN-128B would always edit the waypoint being navigated to instead of the waypoint selected to edit - credit: Sniporbob
 - ARC-186 MAN and PRE mode would not match the position of the AM/FM/MAN/PRE switch - credit: Sniporbob
@@ -45,13 +38,15 @@ After reading this readme, [click here to download the latest version from the r
 - APR39 was not properly classifying and calling out SAM threats with their SA number - credit: Lynx13D
 - Filename conflict caused certain Combined Arms and WWII Asset Pack vehicle sounds to be absent - credit: DD_Friar and DD_Sid
 - Exterior noises were only heard when the Pilot door was open - credit: Sniporbob
-Complete ARC-201 Overhaul - credit: Sniporbob
+  Complete ARC-201 Overhaul - credit: Sniporbob
 - ARC-201 MAN preset could be changed by simply pressing the CLR key
 - ARC-201 display would remain on when function switch set to LD
 - ARC-201 frequency input was not left justified
 - ARC-201 allowed input of invalid frequencies
 - ARC-201 was willing to wait forever for user to input a frequency
+
 #### New Features
+
 - ARC-201 Self Test function (decorative only, does not check for damage)
 - ARC-201 editable single channel presets
 - ARC-201 single channel offset feature
@@ -60,16 +55,24 @@ Complete ARC-201 Overhaul - credit: Sniporbob
 - ARC-201 hopset clearing, loading hopset from preset into working memory, storing to preset, and editing NET ID
 - ARC-201 sound effects (beep for self test and for certain hopset manipulations)
 - ARC-201 full implementation of single channel preset scanning and all relevant commands** (SRS compatible)
-**NOTE: Scanning feature REQUIRES use of the UH-60's "SRS PTT" key binding as well as selecting which radio the player desires to transmit on via ICP panel knob. The SRS key bindings should NOT be used to control the radio. Failure to use the in-cockpit controls will result in broken and unintelligible transmissions on any radio actively utilizing the scan feature.
+  **NOTE: Scanning feature REQUIRES use of the UH-60's "SRS PTT" key binding as well as selecting which radio the player desires to transmit on via ICP panel knob. The SRS key bindings should NOT be used to control the radio. Failure to use the in-cockpit controls will result in broken and unintelligible transmissions on any radio actively utilizing the scan feature.
+
 ### 1.3.2 - Hotfix
+
 #### Bugs/Corrections
+
 - Radios now works again with SRS
+
 ### 1.3
+
 #### Feature Changes
+
 - Added option for unsprung cyclic
 - Added option for pedal trim
 - Flight model improvements
+
 #### Bugs/Corrections
+
 - Stabilator behaviour overhauled
 - Added Internal Cargo support
 - Added more countries
@@ -78,8 +81,11 @@ Complete ARC-201 Overhaul - credit: Sniporbob
 - Removed SRS script
 - Changed bright mode of lighted switches to use CAP panel dimmer logic
 - Fixed wind direction
+
 ### 1.2
+
 #### Feature Changes
+
 - Air source requirement added to engine start procedure
 - Flight model updated - more accurate torque/transmission behaviour (ETL, mass, etc.)
 - Flight Path Stabilization & Trim System improved
@@ -87,7 +93,9 @@ Complete ARC-201 Overhaul - credit: Sniporbob
 - Configurable intenal cargo added
 - Cockpit model updated for scale
 - Many many many wonderful keybinds
+
 #### Bugs/Corrections
+
 - Wheelbrakes fixed
 - Autostart enhancement added
 - Damage to ground fire fixed
@@ -112,13 +120,16 @@ Complete ARC-201 Overhaul - credit: Sniporbob
 - Nr (Rotor Speed) not Driven by Np(Engine Speed)
 - Multiplayer Disconnect issues
 - Master caution does not appear with caution advisory panel cautions
-- [Feature request] Separate key bindings for extending and retracting the fuel probe enhancement 
+- [Feature request] Separate key bindings for extending and retracting the fuel probe enhancement
 - Have Num+/Num- be default for collective inc/dec enhancement
 - Anticollision, Position, NAV, Cabin Light keybinds missing enhancement
 - Add more Fuel probe AAR keybinds enhancement
 - NG at idle correction
+
 ### 1.1
+
 #### Feature Changes
+
 - Radios refactored - FM1, UHF, VHF, FM2 radios all work in game
 - Communications must be reboud to 'PTT - Push To Talk (Game Comms)' key - Communication key will not work
 - Easy Comms mode no longer necessary
@@ -126,7 +137,9 @@ Complete ARC-201 Overhaul - credit: Sniporbob
 - Flight model improved
 - FPS improved
 - Pedal trim enabled by default - option to disable to come later
+
 #### Bugs/Corrections
+
 - GPS - We have to manually Enter N for North bug fixed
 - Nav flags during ILS bug fixed
 - Engine TGT too low correction fixed
@@ -177,5 +190,7 @@ Complete ARC-201 Overhaul - credit: Sniporbob
 - Have the course and heading knobs adjust by 1 with mouse wheel bug fixed
 - HUD Distance to Waypoint shows more than 999.9 km correction fixed
 - HUD Indicated Airspeed goes above 180kts correction fixed
+
 ### 1.0
+
 - Initial release

@@ -1,0 +1,23 @@
+homepage: "https://forum.dcs.world/topic/147247-vsn-flyable-aircraft-mods/"
+name: VSN F-104 (Starfighter EFM FC3 Mod-Pack)
+description: >-
+  Iconic single seat, single engine fighter aircraft of the 50/60/70. Included
+  F-104C, F-104G, F-104S, F-104S_AG, NF-104A. All aircrafts with EFM and custom
+  cockpit. Avionics/Systems are FC3 based.
+authors:
+  - VSN (and check readMe)
+tags:
+  - Aircrafts
+  - Units
+category: Client Units
+license: GPL3 for EFM source-code
+latest: 2.1.0
+versions:
+  - releasepage: "https://forum.dcs.world/topic/147247-vsn-flyable-aircraft-mods/"
+    name: V 2.1.0
+    version: 2.1.0
+    date: 2024-04-13T00:00:00.000Z
+    assets:
+      - source: >-
+          https://edef8.pcloud.com/cBZvCyxUTZQeWAr77ZZZycMzXkZ2ZZj24ZkZl75eNZuVZT7ZzLZAkZSRZKkZe0Z1pZ1zZRJZ0XZgpZNXZHJZF4InZEObcTnnKkazWc4FW2nW6YkzgWqUk/VSN_F104G%20v2.8.2.202%20EFM%20FC3.7z/#/VSN_F104G_2.8.2.202
+        target: "{{DCS_USER_DIR}}/Mods/aircraft/VSN_F104G_2.8.2.202"

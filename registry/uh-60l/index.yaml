@@ -1,0 +1,26 @@
+homepage: "https://github.com/Kinkkujuustovoileipa/uh-60l"
+name: UH-60L
+description: A free UH-60L Black Hawk mod for Digital Combat Simulator
+authors:
+  - sniporbob
+  - shearn89
+  - ANDR0ID-DCS
+  - Norsk22771
+  - asherao
+  - Kinkkujuustovoileipa
+tags:
+  - Helicopter
+  - High Fidelity
+  - Flyable
+category: Helicopter
+license: GNU General Public License v3.0
+latest: 1.4
+versions:
+  - releasepage: "https://github.com/Kinkkujuustovoileipa/uh-60l/releases/tag/1.4"
+    name: UH-60L 1.4
+    version: 1.4
+    date: 2023-01-07T12:00:00.000Z
+    assets:
+      - source: >-
+          https://github.com/Kinkkujuustovoileipa/uh-60l/releases/download/1.4/uh-60l-1.4.zip/#/UH-60L
+        target: "{{DCS_USER_DIR}}/Mods/aircraft/UH-60L"
