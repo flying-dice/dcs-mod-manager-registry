@@ -57,36 +57,6 @@ export const openApiBuilder = new OpenApiBuilder({
                 },
             },
         },
-        "/{id}/latest.json": {
-            get: {
-                summary: "Get Registry Entry Latest Release",
-                operationId: "getRegistryEntryLatestRelease",
-                tags: ["mods"],
-                parameters: [
-                    {
-                        name: "id",
-                        in: "path",
-                        description: "Entry ID",
-                        required: true,
-                        schema: {
-                            type: "string",
-                        },
-                    },
-                ],
-                responses: {
-                    "200": {
-                        description: "OK",
-                        content: {
-                            "application/json": {
-                                schema: {
-                                    $ref: "#/components/schemas/EntryLatestRelease",
-                                },
-                            },
-                        },
-                    },
-                },
-            },
-        },
     },
     components: {
         schemas: {
@@ -95,10 +65,6 @@ export const openApiBuilder = new OpenApiBuilder({
                 description: "TO BE REPLACED BY ZOD SCHEMAS AT BUILD",
             },
             EntryIndex: {
-                type: "object",
-                description: "TO BE REPLACED BY ZOD SCHEMAS AT BUILD",
-            },
-            EntryLatestRelease: {
                 type: "object",
                 description: "TO BE REPLACED BY ZOD SCHEMAS AT BUILD",
             },
