@@ -1,0 +1,26 @@
+homepage: "https://github.com/flying-dice/dcsfiddle-server"
+name: DCS Fiddle
+description: >-
+  DCS Fiddle is a tool for executing Lua scripts in DCS World. It provides a simple HTTP API for executing scripts and retrieving their output.
+  See https://dcsfiddle.pages.dev/ for more information.
+authors:
+  - Flying Dice
+  - john681611
+tags:
+  - Tool
+category: Tool
+license: GNU General Public License v3.0
+latest: 1.0.0
+versions:
+  - releasepage: >-
+      https://github.com/flying-dice/dcsfiddle-server/releases/tag/v1.0.0
+    name: v1.0.0
+    version: 1.0.0
+    date: 2024-12-12T19:22:00.000Z
+    assets:
+      - source: >-
+          https://github.com/flying-dice/dcsfiddle-server/releases/download/v1.0.0/dcs-fiddle-main.lua
+        target: "{{DCS_USER_DIR}}/Scripts/Hooks/dcs-fiddle-main.lua"
+      - source: >-
+          https://github.com/flying-dice/dcsfiddle-server/releases/download/v1.0.0/dcs-fiddle-mission.lua
+        target: "{{DCS_USER_DIR}}/Scripts/Hooks/dcs-fiddle-mission.lua"
