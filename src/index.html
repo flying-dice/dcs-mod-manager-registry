@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Swagger UI</title>
+        <link rel="stylesheet" type="text/css" href="/__swagger-ui-dist/swagger-ui.css" />
+    </head>
+    <body>
+        <div id="swagger-ui"></div>
+        <script src="/__swagger-ui-dist/swagger-ui-bundle.js"></script>
+        <script src="/__swagger-ui-dist/swagger-ui-standalone-preset.js"></script>
+        <script>
+            function HideTopbarPlugin() {
+                // this plugin overrides the Topbar component to return nothing
+                return {
+                    components: {
+                        Topbar: function() { return null }
+                    }
+                }
+            }
+
+            window.onload = () => {
+                const ui = SwaggerUIBundle({
+                    url: "schema.json",
+                    dom_id: "#swagger-ui",
+                    presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
+                    layout: "StandaloneLayout",
+                    displayOperationId: true,
+                    plugins: [HideTopbarPlugin]
+                });
+                window.ui = ui;
+            };
+        </script>
+    </body>
+</html>

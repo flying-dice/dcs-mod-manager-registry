@@ -52,8 +52,10 @@ To test your mod after adding it to the registry:
 
 We provide OpenAPI documentation for the Registry API, accessible at `/schema.json`.
 
-- **Main:** [Swagger UI](https://petstore.swagger.io/?url=https://dcs-mod-manager-registry.pages.dev/schema.json)
-- **Local:** [Swagger UI](https://petstore.swagger.io/?url=http://127.0.0.1:8080/schema.json)
+The Build also includes a Swagger UI for easy browsing of the API.
+
+- **Main:** [Swagger UI](https://dcs-mod-manager-registry.pages.dev/)
+- **Local:** [Swagger UI](http://127.0.0.1:8080/)
 
 ### Registry File Schema
 

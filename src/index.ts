@@ -2,17 +2,16 @@ import { IndexData, indexDataSchema } from "./IndexData";
 import { getAllMods } from "./utils/getAllMods";
 import { join } from "node:path";
 import { config } from "./config";
-import { releaseDataSchema } from "./ReleaseData";
 import { modFileExists } from "./utils/modFileExists";
 import { IndexDto, indexDtoSchema } from "./IndexDto";
 import { RegistryIndexItemDto, registryIndexItemDtoSchema } from "./RegistryIndexItemDto";
 import { copyAsset } from "./utils/copyAsset";
 import { writeJsonFile } from "./utils/writeJsonFile";
 import { zodToJsonSchema } from "zod-to-json-schema";
-import { z } from "zod";
 import { openApiBuilder } from "./openapi";
 import { readFileSync } from "fs";
 import YAML from "yaml";
+import { getAbsoluteFSPath } from "swagger-ui-dist";
 
 /**
  * Builds the mod data and updates the registry index by reading the index and release files
@@ -82,6 +81,18 @@ export function build() {
 
     // Write the registry schema to a JSON file in the distribution directory
     writeJsonFile(join(config.outDir, "registry.schema.json"), zodToJsonSchema(indexDataSchema));
+
+    for (const swaggerAsset of [
+        "swagger-ui-standalone-preset.js",
+        "swagger-ui-bundle.js",
+        "swagger-ui.css",
+    ]) {
+        copyAsset(
+            join(getAbsoluteFSPath(), swaggerAsset),
+            join(config.outDir, "__swagger-ui-dist", swaggerAsset),
+        );
+    }
+    copyAsset(join(__dirname, "index.html"), join(config.outDir, "index.html"));
 }
 
 build();

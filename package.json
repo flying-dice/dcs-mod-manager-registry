@@ -10,11 +10,13 @@
     "devDependencies": {
         "@types/fs-extra": "^11.0.4",
         "@types/node": "^22.10.1",
+        "@types/swagger-ui-dist": "^3.30.5",
         "fs-extra": "^11.2.0",
         "http-server": "^14.1.1",
         "nodemon": "^3.1.7",
         "openapi3-ts": "^4.4.0",
         "prettier": "^3.4.2",
+        "swagger-ui-dist": "^5.18.2",
         "tsx": "^4.19.2",
         "typescript": "^5.7.2",
         "yaml": "^2.6.1",
