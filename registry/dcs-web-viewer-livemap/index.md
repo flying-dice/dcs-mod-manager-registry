@@ -3,7 +3,7 @@
 
 ![logo](https://c10.patreonusercontent.com/4/patreon-media/p/campaign/142196/acadb599dd4c4ace842f8ede1320f23d/eyJ3IjoyMDB9/6.jpg?token-time=2145916800&token-hash=HNoK0sK7N-xzy1x2IF1elrUvbBi5Q6p7jeb2VPha40Q%3D)
 
-# DCS Web Editor LiveMap
+# DCS Web Viewer LiveMap
 
 This is a moving map / F10 map alternative for DCS. It runs in any browser, and on any device ( PC / tablet / phone ).
 
