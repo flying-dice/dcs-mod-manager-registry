@@ -1,0 +1,20 @@
+homepage: "https://www.patreon.com/c/DcsWebEditor"
+name: DCS Web Viewer Live Map
+description: This is a moving map / F10 map alternative for DCS. It runs in any browser, and on any device ( PC / tablet / phone ).
+authors:
+  - DCS Web Editor
+tags:
+  - Tool
+category: Tool
+license: AGPL3
+latest: 0.1.8
+versions:
+  - releasepage: >-
+      https://dcs-web-editor.github.io/dcs-web-viewer-deploy/phantom-edition/
+    name: v0.1.8
+    version: 0.1.8
+    date: 2024-12-14T19:08:33.347Z
+    assets:
+      - source: >-
+          https://dcs-web-editor.github.io/dcs-web-viewer-deploy/phantom-edition/dcs-web-viewer-api-3.lua
+        target: "{{DCS_USER_DIR}}/Scripts/Hooks/dcs-web-viewer-api-3.lua"
