@@ -1,5 +1,6 @@
 [![Join Discord](https://img.shields.io/badge/Join-blue?logo=discord&label=Discord)](https://discord.com/invite/3VudyeRa9h)
 ![Static Badge](https://img.shields.io/badge/patreon-DCS%20Web%20Editor-red?color=gold)
+
 ![logo](https://c10.patreonusercontent.com/4/patreon-media/p/campaign/142196/acadb599dd4c4ace842f8ede1320f23d/eyJ3IjoyMDB9/6.jpg?token-time=2145916800&token-hash=HNoK0sK7N-xzy1x2IF1elrUvbBi5Q6p7jeb2VPha40Q%3D)
 
 # DCS Web Editor LiveMap
