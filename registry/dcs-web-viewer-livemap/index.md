@@ -31,7 +31,7 @@ Ask the OpenKneeboard discord for help [discord](https://discord.gg/WdRvTxjwj4)
 
 ## Usage
 
-After DCS is running a mission, go to [https://dcs-web-editor.github.io/dcs-web-viewer-deploy/phantom-edition/](https://dcs-web-editor.github.io/dcs-web-viewer-deploy/phantom-edition/), preferably in Chrome/Chromium browser. Firefox may also work. Other browser may not work.
+After DCS is running a mission, go to [https://dcs-web-editor.github.io/dcs-web-viewer-deploy/live/](https://dcs-web-editor.github.io/dcs-web-viewer-deploy/live/), preferably in Chrome/Chromium browser. Firefox may also work. Other browser may not work.
 
 ### Shortcuts
 
