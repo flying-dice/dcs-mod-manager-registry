@@ -3,7 +3,7 @@
 [![tslua-codebot](https://img.shields.io/badge/CodeBot-tslua%20dcs-blue?logo=openai)](https://chat.openai.com/g/g-6643nUbup-tslua-dcs-codebot)
 [![patreon](https://img.shields.io/badge/Patreon-flyingdice-red?logo=patreon)](https://patreon.com/flyingdice)
 
-![logo](https://github.com/flying-dice/dcs-hot-loader/blob/main/.dropzone/index.png?raw=true)
+![logo](https://dcs-mod-manager-registry.pages.dev/hot-loader/index.png)
 
 DCS Hot Loader is a tool to allow for hot loading of lua scripts in DCS World.
 
