@@ -5,9 +5,9 @@
 
 # DCS Web Viewer LiveMap
 
-This is a moving map / F10 map alternative for DCS. It runs in any browser, and on any device ( PC / tablet / phone ). See it in action on youtube
+This is a moving map / F10 map alternative for DCS. It runs in any browser, and on any device ( PC / tablet / phone ). See it in action on YouTube.
 
-![DCS Moving Map](https://img.youtube.com/vi/ROhuIJtxM_k/0.jpg)](https://www.youtube.com/watch?v=ROhuIJtxM_k)
+[![DCS Moving Map](https://img.youtube.com/vi/ROhuIJtxM_k/0.jpg)](https://www.youtube.com/watch?v=ROhuIJtxM_k)
 
 ## Features
 
