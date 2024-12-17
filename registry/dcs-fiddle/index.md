@@ -3,7 +3,7 @@
 [![tslua-codebot](https://img.shields.io/badge/CodeBot-tslua%20dcs-blue?logo=openai)](https://chat.openai.com/g/g-6643nUbup-tslua-dcs-codebot)
 [![patreon](https://img.shields.io/badge/Patreon-flyingdice-red?logo=patreon)](https://patreon.com/flyingdice)
 
-![logo](https://github.com/flying-dice/dcsfiddle-server/blob/main/index.png?raw=true)
+![logo](https://dcs-mod-manager-registry.pages.dev/dcs-fiddle/index.png)
 
 # DCS Fiddle HTTP Server
 
@@ -14,48 +14,6 @@ This repository contains two HTTP servers designed to execute LUA scripts in DCS
 - **Execute LUA scripts:** Easily run LUA scripts in DCS World.
 - **RESTful API:** Interact via POST requests for seamless integration with tools and scripts.
 - **Swagger Integration:** View and test API endpoints with OpenAPI specifications.
-
-## Prerequisites
-
-To enable script execution, update your `MissionScripting.lua` file to allow access to `require` and `package` modules. Additionally, configure the LuaSocket package path as follows:
-
-### Updating `MissionScripting.lua`
-
-Replace your `MissionScripting.lua` file content with the following code:
-
-```lua
--- Initialization script for the Mission lua Environment (SSE)
-
-dofile('Scripts/ScriptingSystem.lua')
-
--- Sanitize Mission Scripting environment
--- WARNING: The following configuration makes some functions available, potentially exposing risks.
--- Proceed with caution if using downloaded missions.
-
-local function sanitizeModule(name)
-    _G[name] = nil
-    package.loaded[name] = nil
-end
-
-do
-    sanitizeModule('os')
-    sanitizeModule('io')
-    sanitizeModule('lfs')
-    -- _G['require'] = nil
-    _G['loadlib'] = nil
-    -- _G['package'] = nil
-end
-
-package.path = package.path .. ";.\\LuaSocket\\?.lua"
-package.cpath = package.cpath .. ";.\\LuaSocket\\?.dll"
-```
-
-## Installation
-
-Download the latest release from the [GitHub repository](https://github.com/flying-dice/dcsfiddle-server/releases).
-
-- Add the `dcs-fiddle-main.lua` file to your DCS World `%USERPROFILE%\Saved Games\DCS\Scripts\Hooks` folder.
-- Add the `dcs-fiddle-mission.lua` file to your DCS World `%USERPROFILE%\Saved Games\DCS\Scripts` folder.
 
 ## Usage
 

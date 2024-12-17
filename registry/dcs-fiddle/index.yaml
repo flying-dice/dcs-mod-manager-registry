@@ -10,7 +10,7 @@ tags:
   - Tool
 category: Tool
 license: GNU General Public License v3.0
-latest: 1.0.1
+latest: 1.2.0
 versions:
   - releasepage: >-
       https://github.com/flying-dice/dcsfiddle-server/releases/tag/v1.0.0
@@ -36,3 +36,16 @@ versions:
       - source: >-
           https://github.com/flying-dice/dcsfiddle-server/releases/download/v1.0.1/dcs-fiddle-mission.lua
         target: "{{DCS_USER_DIR}}/Scripts/dcs-fiddle-mission.lua"
+  - releasepage: >-
+      https://github.com/flying-dice/dcsfiddle-server/releases/tag/v1.2.0
+    name: v1.2.0
+    version: 1.2.0
+    date: 2024-12-17T17:56:00.000Z
+    assets:
+      - source: >-
+          https://github.com/flying-dice/dcsfiddle-server/releases/download/v1.2.0/dcs-fiddle-main.lua
+        target: "{{DCS_USER_DIR}}/Scripts/Hooks/dcs-fiddle-main.lua"
+      - source: >-
+          https://github.com/flying-dice/dcsfiddle-server/releases/download/v1.2.0/dcs-fiddle-mission.lua
+        target: "{{DCS_USER_DIR}}/Scripts/dcs-fiddle-mission.lua"
+        runonstart: true

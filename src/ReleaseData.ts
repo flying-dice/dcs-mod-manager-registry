@@ -21,6 +21,12 @@ export const releaseDataSchema = z.object({
                         message:
                             "The target path cannot contain backslashes, use unix style paths i.e. '/'",
                     }),
+                runonstart: z.coerce
+                    .boolean()
+                    .optional()
+                    .describe(
+                        "Run on simulation (mission) start, note that this will execute the script before the mission environment is sanitized",
+                    ),
             }),
         )
         .describe("The array of files to install"),
