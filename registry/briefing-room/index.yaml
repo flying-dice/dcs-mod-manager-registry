@@ -27,7 +27,7 @@ versions:
     name: Version 0.5.202410.08
     version: 0.5.202410.08
     date: 2024-10-08T12:00:00.000Z
-    exePath: "{{DCS_USER_DIR}}/BriefingRoom/BriefingRoomDesktop.exe"
+    exePath: "{{DCS_USER_DIR}}/Tools/BriefingRoom/BriefingRoomDesktop.exe"
     assets:
       - source: >-
           https://github.com/DCS-BR-Tools/briefing-room-for-dcs/releases/download/release-202410.08-241008-171098-11240268625-1/BriefingRoom-V0.5.202410.08.zip/#/BriefingRoom-V0.5.202410.08
