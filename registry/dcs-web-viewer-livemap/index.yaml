@@ -1,10 +1,11 @@
 homepage: "https://www.patreon.com/c/DcsWebEditor"
-name: DCS Web Viewer Live Map
+name: DWV Live Moving Map
 description: This is a moving map / F10 map alternative for DCS. It runs in any browser, and on any device ( PC / tablet / phone ).
 authors:
   - DCS Web Editor
 tags:
   - Tool
+  - Map
 category: Tool
 license: AGPL3
 latest: 0.1.8
