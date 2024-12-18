@@ -1,0 +1,52 @@
+homepage: "https://github.com/Community-A-4E/community-a4e-c"
+name: UH-60L
+description: A free UH-60L Black Hawk mod for Digital Combat Simulator
+authors:
+- SkateZilla
+- uboats
+- Dr. Manius
+- LevelPulse
+- Cubeboy
+- Talo
+- GVad
+- OpticFlow
+- pohlinkzei
+- Coragem
+- nima3333
+- Sidekick65
+- SPINEG
+- Shadowfrost
+- Sport
+- Historiker
+- rudel-chw
+- Luciano
+- Malamem
+- HellesBelles
+- Bungo
+- Corsair016
+- FlyingHueman
+- JacobBadShot
+- JP Gabobo
+- Drofseh
+- Rob
+- ataribaby
+- Tanuki44
+- gcask
+- The Original HoggitDev Team
+- Eric Haugen
+tags:
+  - Jet Aircraft
+  - High Fidelity
+  - Flyable
+category: Jet
+license: GNU General Public License v3.0
+latest: 1.4
+versions:
+  - releasepage: https://github.com/Community-A-4E/community-a4e-c/releases/tag/v2.2
+    name: Community A-4E-C v2.2
+    version: 1.4
+    date: 2024-10-27T12:00:00.000Z
+    assets:
+      - source: >-
+          https://github.com/Community-A-4E/community-a4e-c/releases/download/v2.2/Community_A-4E-C_v2.2.zip/#/A-4E-C
+        target: "{{DCS_USER_DIR}}/Mods/aircraft/A-4E-C"
