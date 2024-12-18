@@ -49,5 +49,5 @@ versions:
     date: 2024-10-27T12:00:00.000Z
     assets:
       - source: >-
-          https://github.com/Community-A-4E/community-a4e-c/releases/download/v2.2/Community_A-4E-C_v2.2.zip/#/A-4E-C
+          https://github.com/Community-A-4E/community-a4e-c/releases/download/v2.2/Community_A-4E-C_v2.2.zip/#/Community_A-4E-C_v2.2/Mods/aircraft
         target: "{{DCS_USER_DIR}}/Mods/aircraft/A-4E-C"
