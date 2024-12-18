@@ -21,5 +21,5 @@ versions:
     date: 2024-10-30T12:00:00.000Z
     assets:
       - source: >-
-          https://github.com/luizrenault/a-29b-community/archive/refs/tags/0.6.0b.zip/#/A-4E-C
-        target: "{{DCS_USER_DIR}}/Mods/aircraft/A-4E-C"
+          https://github.com/luizrenault/a-29b-community/archive/refs/tags/0.6.0b.zip/#/a-29b-community-0.6.0b
+        target: "{{DCS_USER_DIR}}/Mods/aircraft/a-29b-community"
