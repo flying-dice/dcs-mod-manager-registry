@@ -1,0 +1,22 @@
+homepage: "https://e.pcloud.link/publink/show?code=XZ8ajwZEi3hBNQqCFfXSM1LQ4Qot5rfQcHy"
+name: VSN F-4B/C (Early Phantom Pack)
+description: >- 
+    Iconic twin seat, twin engine fighter aircraft of the 60/70. Included F-4B and F-4C. All aircrafts standalone with EFM, custom clickable cockpit and custom systems.
+authors: 
+    - VSN (and check readMe)
+tags: 
+- Aircrafts
+- Units
+category: Client Units
+license: GPL3 for EFM source-code
+latest: 2.9.10.206
+versions:
+  - releasepage: "https://e.pcloud.link/publink/show?code=XZ8ajwZEi3hBNQqCFfXSM1LQ4Qot5rfQcHy"
+    name: v2.9.10.206
+    tag: v2.9.10.206
+    version: 2.9.10.206
+    date: 2024-12-17T12:00:00.000Z
+    assets:
+      - source: >-
+          https://edef2.pcloud.com/cBZfwGXNPZdKpqm3ZZZ9b6QXkZ2ZZRkHZkZqmLuL7Z5XZQkZrFZf0ZyRZr5Z4zZhJZQpZ6XZoFZBXZczZ50Z8ajwZgRpBGvSCF5JaLPh9z7vRt4jdJ6tX/VSN_F4%20standalone%20V2.9.10.206.7z/#/VSN_F4
+        target: "{{DCS_USER_DIR}}/Mods/aircraft/VSN_F4"
