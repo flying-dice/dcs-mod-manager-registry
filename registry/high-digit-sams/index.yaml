@@ -23,5 +23,5 @@ versions:
     assets:
       - remoteSource: https://github.com/Auranis/HighDigitSAMs/releases/download/v2.1.0/HighDigitSAMs_v2_1_0.zip
         links: 
-        - source: "HighDigitSAMs_v2_1_0/HighDigitSAMs_v2_1_0/Mods/tech/HighDigitSAMs"
+        - source: "HighDigitSAMs_v2_1_0/Mods/tech/HighDigitSAMs"
           target: "{{DCS_USER_DIR}}/Mods/tech/HighDigitSAMs"
