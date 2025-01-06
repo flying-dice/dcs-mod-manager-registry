@@ -9,6 +9,9 @@ export const releaseDataSchema = z.object({
     assets: z
         .array(
             z.object({
+                remoteSource: z.coerce.string().describe("The URL of the file to download"),
+                links: z.array(
+                    z.object({
                 source: z.coerce
                     .string()
                     .describe(
@@ -27,6 +30,8 @@ export const releaseDataSchema = z.object({
                     .describe(
                         "Run on simulation (mission) start, note that this will execute the script before the mission environment is sanitized",
                     ),
+                }),
+            ),
             }),
         )
         .describe("The array of files to install"),

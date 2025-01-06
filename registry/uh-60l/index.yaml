@@ -21,6 +21,7 @@ versions:
     version: 1.4
     date: 2023-01-07T12:00:00.000Z
     assets:
-      - source: >-
-          https://github.com/Kinkkujuustovoileipa/uh-60l/releases/download/1.4/uh-60l-1.4.zip/#/UH-60L
-        target: "{{DCS_USER_DIR}}/Mods/aircraft/UH-60L"
+      - remoteSource:  https://github.com/Kinkkujuustovoileipa/uh-60l/releases/download/1.4/uh-60l-1.4.zip
+        links: 
+        - source: "UH-60L"
+          target: "{{DCS_USER_DIR}}/Mods/aircraft/UH-60L"
