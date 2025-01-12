@@ -26,6 +26,7 @@ versions:
         links:
         - source: "dcs-fiddle-main.lua"     
           target: "{{DCS_USER_DIR}}/Scripts/dcs-fiddle-mission.lua"
+          runonstart: true
   - releasepage: >-
       https://github.com/flying-dice/dcsfiddle-server/releases/tag/v1.0.1
     name: v1.0.1
@@ -40,6 +41,7 @@ versions:
         links:
         - source: "dcs-fiddle-main.lua"     
           target: "{{DCS_USER_DIR}}/Scripts/dcs-fiddle-mission.lua"
+          runonstart: true
   - releasepage: >-
       https://github.com/flying-dice/dcsfiddle-server/releases/tag/v1.2.0
     name: v1.2.0
@@ -54,3 +56,4 @@ versions:
         links:
         - source: "dcs-fiddle-main.lua"     
           target: "{{DCS_USER_DIR}}/Scripts/dcs-fiddle-mission.lua"
+          runonstart: true
