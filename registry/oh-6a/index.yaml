@@ -23,7 +23,7 @@ versions:
           - source: "Mods/aircraft/OH-6A"
             target: "{{DCS_USER_DIR}}/Mods/aircraft/OH-6A"
           - source: "Mods/Tech/OH-6A_Weaponpack"
-            target: "{{DCS_USER_DIR}}Mods/Tech/OH-6A_Weaponpack"
+            target: "{{DCS_USER_DIR}}/Mods/tech/OH-6A_Weaponpack"
           - source: "Scripts/Hooks/gunner_export_hook.lua"
             target: "{{DCS_USER_DIR}}/Scripts/Hooks/gunner_export_hook.lua"
           - source: "Scripts/Hooks/OH6GunnerDataExport.dll"

@@ -1,4 +1,4 @@
-![image](images/Header.png)
+![image](https://dcs-mod-manager-registry.pages.dev/oh-6a/index.png)
 # DCS: OH-6A by Tobsen & Eightball
 
 Welcome to OH-6A Mod by Tobsen and Eightball. Please read the readme.
