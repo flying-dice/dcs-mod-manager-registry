@@ -16,6 +16,7 @@ versions:
     version: 0.1.8
     date: 2024-12-14T19:08:33.347Z
     assets:
-      - source: >-
-          https://dcs-web-editor.github.io/dcs-web-viewer-deploy/phantom-edition/dcs-web-viewer-api-3.lua
-        target: "{{DCS_USER_DIR}}/Scripts/Hooks/dcs-web-viewer-api-3.lua"
+      - remoteSource: https://dcs-web-editor.github.io/dcs-web-viewer-deploy/phantom-edition/dcs-web-viewer-api-3.lua
+        links:
+          - source: "dcs-web-viewer-api-3.lua"
+            target: "{{DCS_USER_DIR}}/Scripts/dcs-web-viewer"
