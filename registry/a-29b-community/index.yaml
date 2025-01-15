@@ -20,7 +20,7 @@ versions:
     version: 0.6.0b
     date: 2024-10-30T12:00:00.000Z
     assets:
-      - remoteSource: https://github.com/luizrenault/a-29b-community/archive/refs/tags/0.6.0b.zip
+      - remoteSource: https://codeload.github.com/luizrenault/a-29b-community/zip/refs/tags/0.6.0b
         links:
-          - source: "a-29b-community-0.6.0b"
+          - source: "."
             target: "{{DCS_USER_DIR}}/Mods/aircraft/a-29b-community"
