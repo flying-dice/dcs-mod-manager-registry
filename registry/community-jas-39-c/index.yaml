@@ -1,0 +1,33 @@
+homepage: "https://github.com/luizrenault/a-29b-community"
+name: JAS-39-C Gripen
+description: ->
+  JAS-39-C Gripen mod for DCS!
+authors:
+  - Breadmaker91
+  - Currenthill
+  - FatSpacePanda
+  - FrM|Shaft
+  - kingdevc
+  - Luiz Renault
+  - Gripen Viking
+  - MangoTango
+  - Roughmaster
+  - Whisky Actual
+  - Yatsie
+tags:
+  - Jet Aircraft
+  - High Fidelity
+  - Flyable
+category: Jet Aircraft
+license: GNU General Public License v3.0
+latest: v1.8.5-Beta
+versions:
+  - releasepage: https://github.com/whisky-actual/Community-JAS-39-C/releases
+    name: v1.8.5-Beta
+    version: v1.8.5-Beta
+    date: 2024-10-30T12:00:00.000Z
+    assets:
+      - remoteSource: https://github.com/whisky-actual/Community-JAS-39-C/releases/download/v1.8.5-Beta/JAS39C_1.8.5.zip
+        links:
+          - source: "JAS39"
+            target: "{{DCS_USER_DIR}}/Mods/aircraft/JAS39"
