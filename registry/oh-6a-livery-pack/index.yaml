@@ -12,6 +12,8 @@ tags:
 category: Helicopter
 license: GNU General Public License v3.0
 latest: 1.4
+dependencies:
+  - oh-6a
 versions:
   - releasepage: https://github.com/tobi-be/DCS-OH-6A/releases/tag/LiveryPack_v1.4
     name: OH-6A LiveryPack v1.4
