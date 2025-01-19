@@ -34,6 +34,11 @@ export const indexDataSchema = z.object({
     latest: z.coerce
         .string()
         .describe("The latest version of the mod to be pushed to the subscribers"),
+    dependencies:
+        z.array(z.coerce.string().regex(
+            /^[a-z0-9-]+$/,
+            "The Mod dependency id must be a url safe path specifically kebab case formatted",
+        )).optional().describe("The dependencies of the mod"),
     versions: z.array(releaseDataSchema).describe("The versions of the mod"),
 });
 
