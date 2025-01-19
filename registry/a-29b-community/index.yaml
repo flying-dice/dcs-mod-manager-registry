@@ -1,0 +1,26 @@
+homepage: "https://github.com/luizrenault/a-29b-community"
+name: A-29B Super Tucano
+description: ->
+  This is a free open source EFM A-29B independent module for DCS World. By independent it is meant that it does not require any other modules to work.
+authors:
+  - 5298125985218
+  - jean-knapp
+  - luizrenault
+  - Nosajthedevil
+tags:
+  - Prop Aircraft
+  - High Fidelity
+  - Flyable
+category: Prop Aircraft
+license: GNU General Public License v3.0
+latest: 0.6.0b
+versions:
+  - releasepage: https://github.com/luizrenault/a-29b-community/releases/tag/0.6.0b
+    name: DCS 2.9.0.47168 Open Beta compatible
+    version: 0.6.0b
+    date: 2024-10-30T12:00:00.000Z
+    assets:
+      - remoteSource: https://github.com/luizrenault/a-29b-community/archive/refs/tags/0.6.0b.zip
+        links:
+          - source: "a-29b-community-0.6.0b"
+            target: "{{DCS_USER_DIR}}/Mods/aircraft/a-29b-community"
